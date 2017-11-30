@@ -1,0 +1,251 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Flexbox Layout</title>
+
+		<link rel="stylesheet" href="../node_modules/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../node_modules/reveal.js/css/theme/black.css">
+    <link rel="stylesheet" href="assets/css/presentation.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../node_modules/reveal.js/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../node_modules/reveal.js/css/print/pdf.css' : '../node_modules/reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+
+          <h1>Flexbox Layout</h1>
+          <h3>CSS Flexible Box Layout</h3>
+          <p>
+            <small>Created by <a href="https://twitter.com/Hemphill">Greg Hemphill</a> at <a href="https://webstop.com">Webstop</a></small>
+          </p>
+        </section>
+				<section>
+          <h2>Basics &amp; Terminology</h2>
+          <img src="assets/images/Flexbox_chart.svg">
+        </section>
+        <section>
+          <h2>Flex Container</h2>
+          <div class="row">
+            <div class="col">
+              <img src="assets/images/Flexbox_chart_container.svg">
+            </div>
+            <div class="col">
+              <p>The parent element containing Flex Items. It is defined by the CSS display property. </p>
+              <pre><code class="hljs" style="word-wrap: break-word;">display: flex;</code>or <code class="hljs" style="word-wrap: break-word;">display: inline-flex;</code></pre>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>Flex Container Properties</h2>
+
+          <ul>
+            <li>flex-direction</li>
+            <li>flex-wrap</li>
+            <li>flex-flow</li>
+            <li>justify-content</li>
+            <li>align-items</li>
+            <li>align-content</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>flex-direction</h2>
+          <img src="assets/images/flex-direction.svg">
+          <p>Determines the direction of the <strong>main-axis</strong>. It alters the position and direction of the flex items.</p>
+          <p>Values: <code>row</code> (default), <code>row-reverse</code>, <code>column</code>, or <code>column-reverse</code>.</p>
+          <pre><code class="hljs" style="word-wrap: break-word;">.container { flex-direction: row; }</code></pre>
+        </section>
+
+        <section>
+          <h2>flex-wrap</h2>
+          <p>By default, flex items will stay on the same line. With the ability to shrink or expand as the layout changes.</p>
+          <p>The <code>flex-wrap</code> property can change this behavior in a similar fashion to how the <code>word-wrap</code>
+          property affects text.</p>
+          <p>Values: <code>nowrap</code> (default), <code>wrap</code>, or <code>wrap-reverse</code>.</p>
+          <pre><code class="hljs" style="word-wrap: break-word;">.container { flex-wrap: nowrap; }</code></pre>
+        </section>
+
+        <section>
+          <h2>flex-flow</h2>
+          <p>A shorthand property for <code>flex-direction</code> and <code>flex-wrap</code>.</p>
+          <p>Defaults: <code>row</code>, <code>nowrap</code>.</p>
+          <pre><code class="hljs" style="word-wrap: break-word;">.container { flex-wrap: nowrap; }</code></pre>
+        </section>
+
+        <section>
+          <h2>justify-content</h2>
+          <p>Determines alignment of flex items on the <strong>main-axis</strong>.</p>
+
+          <div class="row">
+            <div class="col-3" style="text-align: left;">
+              Value
+            </div>
+            <div class="col" style="text-align: left;">
+              Effect
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-3" style="text-align: left;">
+              <small><code>flex-start</code> <span style="font-size: 0.7em;">(default)</span></small>
+            </div>
+            <div class="col">
+              <div class="row row-filler justify-flex-start">
+                <div class="col-2"><div class="col-filler full-width h-1 "></div></div>
+                <div class="col-1"><div class="col-filler full-width h-1 "></div></div>
+                <div class="col-4"><div class="col-filler full-width h-1 "></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-3" style="text-align: left;">
+              <small><code>flex-end</code></small>
+            </div>
+            <div class="col">
+              <div class="row row-filler justify-flex-end">
+                <div class="col-2"><div class="col-filler full-width h-1 "></div></div>
+                <div class="col-1"><div class="col-filler full-width h-1 "></div></div>
+                <div class="col-4"><div class="col-filler full-width h-1 "></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-3" style="text-align: left;">
+              <small><code>center</code></small>
+            </div>
+            <div class="col">
+              <div class="row row-filler justify-center">
+                <div class="col-2"><div class="col-filler full-width h-1 "></div></div>
+                <div class="col-1"><div class="col-filler full-width h-1 "></div></div>
+                <div class="col-4"><div class="col-filler full-width h-1 "></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-3" style="text-align: left;">
+              <small><code>space-between</code></small>
+            </div>
+            <div class="col">
+              <div class="row row-filler justify-space-between">
+                <div class="col-2"><div class="col-filler full-width h-1 "></div></div>
+                <div class="col-1"><div class="col-filler full-width h-1 "></div></div>
+                <div class="col-4"><div class="col-filler full-width h-1 "></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-3" style="text-align: left;">
+              <small><code>space-around</code></small>
+            </div>
+            <div class="col">
+              <div class="row row-filler justify-space-around">
+                <div class="col-2"><div class="col-filler full-width h-1 "></div></div>
+                <div class="col-1"><div class="col-filler full-width h-1 "></div></div>
+                <div class="col-4"><div class="col-filler full-width h-1 "></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-3" style="text-align: left;">
+              <small><code>space-evenly</code></small>
+            </div>
+            <div class="col">
+              <div class="row row-filler justify-space-evenly">
+                <div class="col-2"><div class="col-filler full-width h-1 "></div></div>
+                <div class="col-1"><div class="col-filler full-width h-1 "></div></div>
+                <div class="col-4"><div class="col-filler full-width h-1 "></div></div>
+              </div>
+            </div>
+          </div>
+
+          <pre><code class="hljs" style="word-wrap: break-word;">.container { justify-content: flex-start; }</code></pre>
+        </section>
+
+        <section>
+          <h2>align-items</h2>
+          <p>Determines alignment of flex items on the cross-axis.</p>
+          <div class="row">
+            <div class="col">
+              <small><code>flex-start</code></small>
+              <div class="row row-filler justify-center align-flex-start">
+                <div class="col"><div class="col-filler full-width h-2"></div></div>
+                <div class="col"><div class="col-filler full-width h-1 "></div></div>
+                <div class="col"><div class="col-filler full-width h-3"></div></div>
+              </div>
+            </div>
+            <div class="col">
+              <small><code>flex-end</code></small>
+              <div class="row row-filler align-flex-end">
+                <div class="col"><div class="col-filler full-width h-2"></div></div>
+                <div class="col"><div class="col-filler full-width h-1 "></div></div>
+                <div class="col"><div class="col-filler full-width h-3"></div></div>
+              </div>
+            </div>
+            <div class="col">
+              <small><code>center</code></small>
+              <div class="row row-filler align-center">
+                <div class="col"><div class="col-filler full-width h-2"></div></div>
+                <div class="col"><div class="col-filler full-width h-1 "></div></div>
+                <div class="col"><div class="col-filler full-width h-3"></div></div>
+              </div>
+            </div>
+            <div class="col">
+              <small><code>stretch</code> <span style="font-size: 0.7em;">(default)</span></small>
+              <div class="row row-filler align-stretch">
+                <div class="col"><div class="col-filler full-width full-height"></div></div>
+                <div class="col"><div class="col-filler full-width full-height"></div></div>
+                <div class="col"><div class="col-filler full-width h-3"></div></div>
+              </div>
+            </div>
+            <div class="col">
+              <small><code>baseline</code></small>
+              <div class="row row-filler align-baseline h-3">
+                <div class="col"><div class="col-filler full-width" style="font-size: 0.8em; color: #333;">A</div></div>
+                <div class="col"><div class="col-filler full-width" style="font-size: 0.5em; color: #333;">A</div></div>
+                <div class="col"><div class="col-filler full-width" style="font-size: 1.0em; color: #333;">A</div></div>
+              </div>
+            </div>
+          </div>
+          <pre><code class="hljs" style="word-wrap: break-word;">.container { align-items: stretch; }</code></pre>
+        </section>
+
+			</div>
+		</div>
+
+		<script src="../node_modules/reveal.js/lib/js/head.min.js"></script>
+		<script src="../node_modules/reveal.js/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: '../node_modules/reveal.js/plugin/markdown/marked.js' },
+					{ src: '../node_modules/reveal.js/plugin/markdown/markdown.js' },
+					{ src: '../node_modules/reveal.js/plugin/notes/notes.js', async: true },
+					{ src: '../node_modules/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

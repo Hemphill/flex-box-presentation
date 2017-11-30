@@ -1,0 +1,110 @@
+<svg id="2d05c1cc-fb0f-4972-b8ec-e2207b0b8dde" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 739 451">
+  <defs>
+    <style>
+      .\36 40c1c46-46ce-4f01-839d-a569759d9a17 {
+        fill: #d4f2ff;
+      }
+
+      .\30 9832a67-1cdb-4ced-b5a1-3330b6161c8e, .\36 40c1c46-46ce-4f01-839d-a569759d9a17, .\38 d8bc587-29e6-4080-9c73-ac11546c28d9 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .\30 9832a67-1cdb-4ced-b5a1-3330b6161c8e {
+        fill: #999;
+      }
+
+      .\38 02bc931-fbb6-4e7b-95fe-05cdb20ebc19 {
+        font-size: 18px;
+      }
+
+      .\38 02bc931-fbb6-4e7b-95fe-05cdb20ebc19, .f0c7765a-fc0a-4c55-9ead-589ad59995d0 {
+        font-family: HelveticaNeue, Helvetica Neue;
+      }
+
+      .\37 0918863-13ac-4337-8d76-352bdb94338e, .\38 d8bc587-29e6-4080-9c73-ac11546c28d9 {
+        fill: none;
+      }
+
+      .\31 3cbf70d-1b48-4624-8b7e-40915a99a63a {
+        fill: #333;
+      }
+
+      .f0c7765a-fc0a-4c55-9ead-589ad59995d0 {
+        font-size: 14px;
+        fill: #e6e6e6;
+      }
+
+      .c8beabd9-7db2-4132-9acf-94a2871ad4dd {
+        letter-spacing: -0.02em;
+      }
+
+      .c634f2a8-ae5f-4ab2-b93c-bc4328eb8e72 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <title>Flexbox_chart</title>
+  <rect class="640c1c46-46ce-4f01-839d-a569759d9a17" x="0.5" y="0.5" width="738" height="450"/>
+  <rect class="09832a67-1cdb-4ced-b5a1-3330b6161c8e" x="36.5" y="144.5" width="197.44" height="197.44"/>
+  <text class="802bc931-fbb6-4e7b-95fe-05cdb20ebc19" transform="translate(53.94 171.5)">Flex Item</text>
+  <rect class="09832a67-1cdb-4ced-b5a1-3330b6161c8e" x="270.5" y="145.06" width="197.44" height="197.44"/>
+  <rect class="09832a67-1cdb-4ced-b5a1-3330b6161c8e" x="503.94" y="144.5" width="197.44" height="197.44"/>
+  <text class="802bc931-fbb6-4e7b-95fe-05cdb20ebc19" transform="translate(288.5 171.5)">Flex Item</text>
+  <text class="802bc931-fbb6-4e7b-95fe-05cdb20ebc19" transform="translate(521.94 171.5)">Flex Item</text>
+  <g>
+    <line class="8d8bc587-29e6-4080-9c73-ac11546c28d9" x1="653.97" y1="151.56" x2="653.97" y2="335.44"/>
+    <polygon points="653.97 144.5 649.9 154.45 653.97 152.09 658.03 154.45 653.97 144.5"/>
+    <polygon points="653.97 342.5 649.9 332.55 653.97 334.91 658.03 332.55 653.97 342.5"/>
+  </g>
+  <g>
+    <line class="8d8bc587-29e6-4080-9c73-ac11546c28d9" x1="461.44" y1="266.93" x2="277.56" y2="266.93"/>
+    <polygon points="468.5 266.93 458.55 262.87 460.91 266.93 458.55 271 468.5 266.93"/>
+    <polygon points="270.5 266.93 280.45 262.87 278.09 266.93 280.45 271 270.5 266.93"/>
+  </g>
+  <rect class="13cbf70d-1b48-4624-8b7e-40915a99a63a" x="333.5" y="252.5" width="81" height="27"/>
+  <text class="f0c7765a-fc0a-4c55-9ead-589ad59995d0" transform="translate(342.5 270.5)">Main Size</text>
+  <rect class="13cbf70d-1b48-4624-8b7e-40915a99a63a" x="612.5" y="228.68" width="81" height="27"/>
+  <text class="f0c7765a-fc0a-4c55-9ead-589ad59995d0" transform="translate(621.5 244.82)">C<tspan class="c8beabd9-7db2-4132-9acf-94a2871ad4dd" x="10.11" y="0">r</tspan><tspan class="c634f2a8-ae5f-4ab2-b93c-bc4328eb8e72" x="14.52" y="0">oss Size</tspan></text>
+  <text class="802bc931-fbb6-4e7b-95fe-05cdb20ebc19" style="fill: #0194d3; font-weight: bold; font-size: 24px;" transform="translate(9.5 27.5)">Flex Container</text>
+  <g>
+    <line class="8d8bc587-29e6-4080-9c73-ac11546c28d9" x1="7.56" y1="99.5" x2="731.44" y2="100"/>
+    <polygon points="0.5 99.5 10.45 103.57 8.09 99.5 10.45 95.44 0.5 99.5"/>
+    <polygon points="738.5 100 728.55 104.06 730.91 100 728.55 95.93 738.5 100"/>
+  </g>
+  <rect class="13cbf70d-1b48-4624-8b7e-40915a99a63a" x="36.5" y="85.5" width="81" height="27"/>
+  <text class="f0c7765a-fc0a-4c55-9ead-589ad59995d0" transform="translate(45.5 103.5)">Main Axis</text>
+  <line class="70918863-13ac-4337-8d76-352bdb94338e" x1="253" y1="0.5" x2="252.5" y2="450.5"/>
+  <g>
+    <line class="8d8bc587-29e6-4080-9c73-ac11546c28d9" x1="252.73" y1="7.56" x2="252.5" y2="443.44"/>
+    <polygon points="252.73 0.5 248.66 10.45 252.72 8.09 256.79 10.45 252.73 0.5"/>
+    <polygon points="252.5 450.5 248.44 440.55 252.5 442.91 256.57 440.55 252.5 450.5"/>
+  </g>
+  <rect class="13cbf70d-1b48-4624-8b7e-40915a99a63a" x="207.5" y="36.5" width="90" height="27"/>
+  <text class="f0c7765a-fc0a-4c55-9ead-589ad59995d0" transform="translate(216.5 54.5)">C<tspan class="c8beabd9-7db2-4132-9acf-94a2871ad4dd" x="10.11" y="0">r</tspan><tspan class="c634f2a8-ae5f-4ab2-b93c-bc4328eb8e72" x="14.52" y="0">oss Axis</tspan></text>
+  <rect class="13cbf70d-1b48-4624-8b7e-40915a99a63a" x="324.5" y="36.5" width="90" height="27"/>
+  <text class="f0c7765a-fc0a-4c55-9ead-589ad59995d0" transform="translate(333.5 54.5)">C<tspan class="c8beabd9-7db2-4132-9acf-94a2871ad4dd" x="10.11" y="0">r</tspan><tspan class="c634f2a8-ae5f-4ab2-b93c-bc4328eb8e72" x="14.52" y="0">oss Start</tspan></text>
+  <g>
+    <line class="8d8bc587-29e6-4080-9c73-ac11546c28d9" x1="369.5" y1="36.5" x2="369.5" y2="4.07"/>
+    <circle cx="369.5" cy="4.26" r="3.76"/>
+  </g>
+  <rect class="13cbf70d-1b48-4624-8b7e-40915a99a63a" x="324.5" y="387.5" width="90" height="27"/>
+  <text class="f0c7765a-fc0a-4c55-9ead-589ad59995d0" transform="translate(333.5 405.5)">C<tspan class="c8beabd9-7db2-4132-9acf-94a2871ad4dd" x="10.11" y="0">r</tspan><tspan class="c634f2a8-ae5f-4ab2-b93c-bc4328eb8e72" x="14.52" y="0">oss End</tspan></text>
+  <g>
+    <line class="8d8bc587-29e6-4080-9c73-ac11546c28d9" x1="369.5" y1="414.5" x2="369.5" y2="446.93"/>
+    <circle cx="369.5" cy="446.74" r="3.76"/>
+  </g>
+  <rect class="13cbf70d-1b48-4624-8b7e-40915a99a63a" x="36.5" y="387.5" width="81" height="27"/>
+  <text class="f0c7765a-fc0a-4c55-9ead-589ad59995d0" transform="translate(45.5 405.5)">Main Start</text>
+  <rect class="13cbf70d-1b48-4624-8b7e-40915a99a63a" x="621.5" y="387.5" width="81" height="27"/>
+  <text class="f0c7765a-fc0a-4c55-9ead-589ad59995d0" transform="translate(630.5 405.5)">Main End</text>
+  <line class="70918863-13ac-4337-8d76-352bdb94338e" x1="36.5" y1="396.5" x2="0.5" y2="396.5"/>
+  <g>
+    <line class="8d8bc587-29e6-4080-9c73-ac11546c28d9" x1="36.5" y1="396.5" x2="4.07" y2="396.5"/>
+    <circle cx="4.26" cy="396.5" r="3.76"/>
+  </g>
+  <g>
+    <line class="8d8bc587-29e6-4080-9c73-ac11546c28d9" x1="702.5" y1="396.5" x2="734.93" y2="396.5"/>
+    <circle cx="734.74" cy="396.5" r="3.76"/>
+  </g>
+</svg>

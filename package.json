@@ -1,0 +1,12 @@
+{
+  "name": "flex-box-presentation",
+  "version": "1.0.0",
+  "description": "Presentation describing flex-box grids.",
+  "main": "index.html",
+  "repository": "https://github.com/Hemphill/flex-box-presentation",
+  "author": "Greg Hemphill",
+  "license": "MIT",
+  "dependencies": {
+    "reveal.js": "^3.6.0"
+  }
+}

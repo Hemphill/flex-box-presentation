@@ -1,0 +1,178 @@
+/* custom theme */
+code {
+  color: #0194d3;
+}
+
+/* examples */
+.col-filler { background-color: #d4f2ff; margin: 0; padding: 0; }
+.row-filler { background-color: #003b54; }
+
+.full-width {  width: 100%; }
+.full-height { height: 100% }
+
+/* justify-content */
+.justify-flex-start {    justify-content: flex-start; }
+.justify-flex-end {      justify-content: flex-end; }
+.justify-center {        justify-content: center; }
+.justify-space-between { justify-content: space-between; }
+.justify-space-around {  justify-content: space-around; }
+.justify-space-evenly {  justify-content: space-evenly; }
+
+/* align-items */
+.align-flex-start {     align-items: flex-start; }
+.align-flex-end {       align-items: flex-end; }
+.align-center {         align-items: center; }
+.align-stretch {        align-items: stretch; }
+.align-baseline {       align-items: baseline; }
+
+/* heights */
+.h-1 { min-height: 1em; }
+.h-2 { min-height: 2em; }
+.h-3 { min-height: 3em; }
+.h-4 { min-height: 4em; }
+.h-5 { min-height: 5em; }
+.h-6 { min-height: 6em; }
+
+/* widths */
+.w-1 { min-width: 1em; }
+.w-2 { min-width: 2em; }
+.w-3 { min-width: 3em; }
+.w-4 { min-width: 4em; }
+.w-5 { min-width: 5em; }
+.w-6 { min-width: 6em; }
+
+
+
+
+/* Overrides */
+
+.reveal section img {
+  border: 0;
+}
+
+/* WS: #0194d3;
+.ws-blue {
+  color: #0194d3;
+}
+
+.ws-blue-25-lighten {
+  color: #55ccfe;
+}
+
+.ws-blue-50-lighten {
+  color: #d4f2ff;
+}
+
+.ws-blue-25-darken {
+  color: #003b54;
+}
+*/
+
+
+/* grid */
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.column {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col {
+  margin: 0;
+  padding: 0;
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.col-auto {
+  margin: 0;
+  padding: 0;
+  flex: 0 0 auto;
+  width: auto;
+  max-width: none;
+}
+
+
+.row .col-1, .row .col-2, .row .col-3, .row .col-4, .row .col-5,
+.row .col-6, .row .col-7, .row .col-8, .row .col-9, .row .col-10,
+.row .col-11, .row .col-12, .row .col, .row .col-auto {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-1 {
+  flex: 0 0 8.3333333333%;
+  max-width: 8.3333333333%
+}
+
+.col-2 {
+  flex: 0 0 16.6666666667%;
+  max-width: 16.6666666667%
+}
+
+.col-3 {
+  flex: 0 0 25%;
+  max-width: 25%
+}
+
+.col-4 {
+  flex: 0 0 33.3333333333%;
+  max-width: 33.3333333333%
+}
+
+.col-5 {
+  flex: 0 0 41.6666666667%;
+  max-width: 41.6666666667%
+}
+
+.col-6 {
+  flex: 0 0 50%;
+  max-width: 50%
+}
+
+.col-7 {
+  flex: 0 0 58.3333333333%;
+  max-width: 58.3333333333%
+}
+
+.col-8 {
+  flex: 0 0 66.6666666667%;
+  max-width: 66.6666666667%
+}
+
+.col-9 {
+  flex: 0 0 75%;
+  max-width: 75%
+}
+
+.col-10 {
+  flex: 0 0 83.3333333333%;
+  max-width: 83.3333333333%
+}
+
+.col-11 {
+  flex: 0 0 91.6666666667%;
+  max-width: 91.6666666667%
+}
+
+.col-12 {
+  flex: 0 0 100%;
+  max-width: 100%
+}
+
