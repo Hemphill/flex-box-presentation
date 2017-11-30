@@ -4,7 +4,7 @@ code {
 }
 
 /* examples */
-.col-filler { background-color: #d4f2ff; margin: 0; padding: 0; }
+.col-filler { background-color: #d4f2ff; }
 .row-filler { background-color: #003b54; }
 
 .full-width {  width: 100%; }
@@ -26,7 +26,7 @@ code {
 .align-baseline {       align-items: baseline; }
 
 /* heights */
-.h-1 { min-height: 1em; }
+.h-1 { min-height: 0.8em; }
 .h-2 { min-height: 2em; }
 .h-3 { min-height: 3em; }
 .h-4 { min-height: 4em; }
@@ -41,7 +41,7 @@ code {
 .w-5 { min-width: 5em; }
 .w-6 { min-width: 6em; }
 
-
+.reveal .m-t { margin-top: 10px; margin-bottom: 10px; }
 
 
 /* Overrides */

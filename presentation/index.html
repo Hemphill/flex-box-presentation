@@ -182,7 +182,7 @@
 
         <section>
           <h2>align-items</h2>
-          <p>Determines alignment of flex items on the cross-axis.</p>
+          <p>Determines alignment of flex items on the cross-axis for the current line.</p>
           <div class="row">
             <div class="col">
               <small><code>flex-start</code></small>
@@ -226,6 +226,91 @@
             </div>
           </div>
           <pre><code class="hljs" style="word-wrap: break-word;">.container { align-items: stretch; }</code></pre>
+        </section>
+
+        <section>
+          <h2>align-content</h2>
+          <p><small>Determines spacing of flex items on the cross-axis when extra space is available. Only applies when flex items have wrapped to multiple lines.</small></p>
+          <div class="row">
+
+            <div class="col">
+              <small><code>flex-start</code></small>
+              <div class="row row-filler h-4" style="align-content: flex-start; flex-wrap: wrap;">
+                <div class="col-2"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-1"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-3"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-3"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-2"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-3"><div class="col-filler h-1 m-t"></div></div>
+              </div>
+            </div>
+
+            <div class="col">
+              <small><code>flex-end</code></small>
+              <div class="row row-filler h-4" style="align-content: flex-end; flex-wrap: wrap;">
+                <div class="col-2"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-1"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-3"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-3"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-2"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-3"><div class="col-filler h-1 m-t"></div></div>
+              </div>
+            </div>
+
+            <div class="col">
+              <small><code>center</code></small>
+              <div class="row row-filler h-4" style="align-content: center; flex-wrap: wrap;">
+                <div class="col-2"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-1"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-3"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-3"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-2"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-3"><div class="col-filler h-1 m-t"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+
+
+            <div class="col">
+              <small><code>stretch</code> <span style="font-size: 0.7em;">(default)</span></small>
+              <div class="row row-filler h-4" style="align-content: stretch; flex-wrap: wrap;">
+                <div class="col-2"><div class="col-filler full-height"></div></div>
+                <div class="col-1"><div class="col-filler full-height"></div></div>
+                <div class="col-3"><div class="col-filler full-height"></div></div>
+                <div class="col-3"><div class="col-filler full-height"></div></div>
+                <div class="col-2"><div class="col-filler full-height"></div></div>
+                <div class="col-3"><div class="col-filler full-height"></div></div>
+              </div>
+            </div>
+
+            <div class="col">
+              <small><code>space-around</code></small>
+              <div class="row row-filler h-4" style="align-content: space-around; flex-wrap: wrap;">
+                <div class="col-2"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-1"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-3"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-3"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-2"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-3"><div class="col-filler h-1 m-t"></div></div>
+              </div>
+            </div>
+
+            <div class="col">
+              <small><code>space-between</code></small>
+              <div class="row row-filler h-4" style="align-content: space-between; flex-wrap: wrap;">
+                <div class="col-2"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-1"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-3"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-3"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-1"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-3"><div class="col-filler h-1 m-t"></div></div>
+              </div>
+            </div
+
+          </div>
+
+          <pre><code class="hljs" style="word-wrap: break-word;">.container { align-content: stretch; }</code></pre>
         </section>
 
 			</div>
