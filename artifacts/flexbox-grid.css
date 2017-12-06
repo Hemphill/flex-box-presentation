@@ -8,16 +8,12 @@
 }
 
 .col {
-  margin: 0;
-  padding: 0;
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%;
 }
 
 .col-auto {
-  margin: 0;
-  padding: 0;
   flex: 0 0 auto;
   width: auto;
   max-width: none;
@@ -26,11 +22,13 @@
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9,
 .col-10, .col-11, .col-12, .col, .col-auto {
-    position: relative;
-    width: 100%;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px
 }
 
 .col-1 {

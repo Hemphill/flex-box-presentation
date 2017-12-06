@@ -87,6 +87,15 @@ code {
 
 
 /* grid */
+.column {
+   margin: 0;
+   padding: 0;
+   display: flex;
+   flex-wrap: wrap;
+   margin-right: -15px;
+   margin-left: -15px;
+ }
+
 
 .row {
   display: flex;
@@ -97,26 +106,15 @@ code {
   margin-left: -15px;
 }
 
-.column {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-  margin-right: -15px;
-  margin-left: -15px;
-}
+
 
 .col {
-  margin: 0;
-  padding: 0;
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%;
 }
 
 .col-auto {
-  margin: 0;
-  padding: 0;
   flex: 0 0 auto;
   width: auto;
   max-width: none;
@@ -129,6 +127,8 @@ code {
   position: relative;
   width: 100%;
   min-height: 1px;
+  margin: 0;
+  padding: 0;
   padding-right: 15px;
   padding-left: 15px;
 }

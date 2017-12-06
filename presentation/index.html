@@ -28,6 +28,49 @@
 
 
 
+
+        <section>
+          <h2>A Basic Flex Item</h2>
+          <p>Here we make a basic column. Each flex item with the <code>col</code> class will be the same width as each other.</p>
+          <div class="row">
+            <div class="col">
+              <pre><code class="hljs" style="word-wrap: break-word;">.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}</code></pre>
+            </div>
+            <div class="col">
+              <pre><code class="hljs" style="word-wrap: break-word;"><div class="row">
+  <div class="col">...</div>
+  <div class="col">...</div>
+  <div class="col">...</div>
+</div></code></pre>
+            </div>
+          </div>
+
+          <p><small>
+            We can add or remove flex items with the <code>col</code> class and the grid will adjust,
+            giving each flex item column an equal length as a proportion of the flex container row.
+          </small></p>
+          <div class="row row-filler" style="height: 1.5em;">
+            <div class="col"><div class="col-filler full-width h-1 dark-gray">1</div></div>
+            <div class="col"><div class="col-filler full-width h-1 dark-gray">2</div></div>
+            <div class="col"><div class="col-filler full-width h-1 dark-gray">3</div></div>
+          </div>
+
+          <div class="row row-filler">
+            <div class="col"><div class="col-filler full-width h-1 dark-gray">1</div></div>
+            <div class="col"><div class="col-filler full-width h-1 dark-gray">2</div></div>
+            <div class="col"><div class="col-filler full-width h-1 dark-gray">3</div></div>
+            <div class="col"><div class="col-filler full-width h-1 dark-gray">4</div></div>
+          </div>
+
+        </section>
+
+
+
+
 				<section>
           <h1>Flexbox Layout</h1>
           <h3>CSS Flexible Box Layout</h3>
@@ -35,10 +78,19 @@
             <small>Created by <a href="https://twitter.com/Hemphill">Greg Hemphill</a> at <a href="https://webstop.com">Webstop</a></small>
           </p>
         </section>
+
+        <section>
+          <h2>What is Flexbox?</h2>
+          <p>Flexbox, a W3C level 1 module, is the first widely adopted proper CSS layout mechanism.</p>
+          <hr>
+          <p>In the past we had to rely on floats or tables, which were not designed for the task. This left us with buggy, verbose &amp; hacky solutions. </p>
+        </section>
+
 				<section>
           <h2>Basics &amp; Terminology</h2>
           <img src="assets/images/Flexbox_chart.svg">
         </section>
+
         <section>
           <h1>Flex Container</h1>
           <div class="row">
@@ -51,9 +103,9 @@
             </div>
           </div>
         </section>
+
         <section>
           <h2>Flex Container Properties</h2>
-
           <ul>
             <li>flex-direction</li>
             <li>flex-wrap</li>
@@ -370,6 +422,7 @@
             </div>
           </div>
         </section>
+
         <section>
           <h2>flex-grow</h2>
           <p>Determines how big flex-items are in relation to each other.
@@ -413,6 +466,113 @@
           </div>
           <p>Accepts whole numbers. Default value is <code>1</code>.</p>
           <pre><code class="hljs" style="word-wrap: break-word;">.flex-item { flex-shrink: 1; }</code></pre>
+        </section>
+
+        <section>
+          <h2>flex</h2>
+          <p>
+            A short hand for <code>flex-grow</code>, <code>flex-shrink</code>, &amp; <code>flex-basis</code>.
+            It can be expressed five ways:
+          </p>
+          <small>
+            <ol>
+              <li><code>flex-grow</code>, <code>flex-shrink</code>,  &amp; <code>flex-basis</code></li>
+              <li><code>flex-grow</code> &amp; <code>flex-shrink</code></li>
+              <li><code>flex-grow</code> &amp; <code>flex-basis</code></li>
+              <li><code>flex-grow</code></li>
+              <li><code>flex-basis</code></li>
+            </ol>
+          </small>
+
+          <pre><code class="hljs" style="word-wrap: break-word;">.flex-item { flex: 0 1 auto; }</code></pre>
+          <p><strong>Tip:</strong> Setting the <code>flex</code> property is preferred over individual properties, because it sets sensible defaults for your flex item.</p>
+        </section>
+
+        <section>
+          <h1>Example</h1>
+          <p>We are going to build a simple grid. With a Flex Container and Flex Items inside it.</p>
+        </section>
+
+        <section>
+          <h2>A Flex Container</h2>
+          <p>We are going to call our flex container <code>.row</code> using the default left to right direction. </p>
+          <div class="row">
+            <div class="col">
+              <pre><code class="hljs" style="word-wrap: break-word;">.row {
+  display: flex;
+  flex-wrap: wrap;
+}</code></pre>
+            </div>
+            <div class="col">
+              <pre><code class="hljs" style="word-wrap: break-word;"><div class="row">
+  ... flex items go here ...
+</div></code></pre>
+            </div>
+          </div>
+
+          <p><small>Simple stuff, doesn't do much of anything on it's own, we need flex items inside it to act as columns in our row.</small></p>
+
+        </section>
+
+        <section>
+          <h2>A Basic Flex Item</h2>
+          <p>Here we make a basic column. Each flex item with the <code>col</code> class will be the same width as each other.</p>
+          <div class="row">
+            <div class="col">
+              <pre><code class="hljs" style="word-wrap: break-word;">.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}</code></pre>
+            </div>
+            <div class="col">
+              <pre><code class="hljs" style="word-wrap: break-word;"><div class="row">
+  <div class="col">...</div>
+  <div class="col">...</div>
+  <div class="col">...</div>
+</div></code></pre>
+            </div>
+          </div>
+
+          <p><small>
+            We can add or remove flex items with the <code>col</code> class and the grid will adjust,
+            giving each flex item column an equal length as a proportion of the flex container row.
+          </small></p>
+          <div class="row row-filler" style="height: 1.5em;">
+            <div class="col"><div class="col-filler full-width h-1 dark-gray">1</div></div>
+            <div class="col"><div class="col-filler full-width h-1 dark-gray">2</div></div>
+            <div class="col"><div class="col-filler full-width h-1 dark-gray">3</div></div>
+          </div>
+
+          <div class="row row-filler">
+            <div class="col"><div class="col-filler full-width h-1 dark-gray">1</div></div>
+            <div class="col"><div class="col-filler full-width h-1 dark-gray">2</div></div>
+            <div class="col"><div class="col-filler full-width h-1 dark-gray">3</div></div>
+            <div class="col"><div class="col-filler full-width h-1 dark-gray">4</div></div>
+          </div>
+
+        </section>
+
+        <section>
+          <h2>Resources</h2>
+          <small>
+            <ul>
+              <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS-Tricks Guide to Flexbox</a> A clear overview and guide to Flexbox.</li>
+              <li><a href="https://philipwalton.github.io/solved-by-flexbox/">Solved by Flexbox</a> Showcases hard to solve CSS problems, that become easy with Flexbox.</li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">Mozilla Flexible Boxes</a> A comprehensive guide to Flexbox.</li>
+              <li><a href="https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties">Visual Guide</a> A Visual Guide to CSS3 Flexbox Properties.</li>
+              <li><a href="https://www.w3.org/TR/css-flexbox-1/">CSS Flexible Box Layout Module Level 1</a> W3C specification describes a CSS box model optimized for user interface design.</li>
+              <li><a href="https://flexbox.io">What The Flexbox?</a> A free video course for learning Flexbox.</li>
+              <li><a href="http://flexboxfroggy.com">Flexbox Froggy</a> A game that helps you learn Flexbox.</li>
+            </ul>
+          </small>
+        </section>
+
+        <section>
+          <h2>Learning Tip</h2>
+          <p>Flexbox started way back in 2007-2009, it's gone through 3 major iterations, and the final form came about in 2012.
+            Thus, you might run into outdated blog posts or other online resources.</p>
+          <p><strong>TIP: </strong> look for <strong><code style="color: lightgreen;">display: flex;</code></strong> in articles about Flexbox. If you see <code style="color: red;">display: box;</code> or <code style="color: red;">display: flexbox;</code> the article is about the older versions of the spec which is very different than the final version.</p>
         </section>
 
 			</div>
