@@ -3,6 +3,8 @@ code {
   color: #0194d3;
 }
 
+.dark-gray { color: #333; }
+
 /* examples */
 .col-filler { background-color: #d4f2ff; }
 .row-filler { background-color: #003b54; }
@@ -24,6 +26,21 @@ code {
 .align-center {         align-items: center; }
 .align-stretch {        align-items: stretch; }
 .align-baseline {       align-items: baseline; }
+
+/* order */
+.order-1 { order: 1 }
+.order-2 { order: 2 }
+.order-3 { order: 3 }
+.order-4 { order: 4 }
+.order-5 { order: 5 }
+
+/* flex-grow */
+.reveal .grow-0 { flex-grow: 0; padding: 15px; }
+.reveal .grow-1 { flex-grow: 1; padding: 15px; }
+.reveal .grow-2 { flex-grow: 2; padding: 15px; }
+.reveal .grow-3 { flex-grow: 3; padding: 15px; }
+.reveal .grow-4 { flex-grow: 4; padding: 15px; }
+.reveal .grow-5 { flex-grow: 5; padding: 15px; }
 
 /* heights */
 .h-1 { min-height: 0.8em; }
