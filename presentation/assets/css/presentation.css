@@ -96,6 +96,17 @@ code {
    margin-left: -15px;
  }
 
+.row .col-1, .row .col-2, .row .col-3, .row .col-4, .row .col-5,
+.row .col-6, .row .col-7, .row .col-8, .row .col-9, .row .col-10,
+.row .col-11, .row .col-12, .row .col, .row .col-auto {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  margin: 0;
+  padding: 0;
+  padding-right: 15px;
+  padding-left: 15px;
+}
 
 .row {
   display: flex;
@@ -114,24 +125,14 @@ code {
   max-width: 100%;
 }
 
-.col-auto {
+.row .col-auto {
   flex: 0 0 auto;
   width: auto;
   max-width: none;
 }
 
 
-.row .col-1, .row .col-2, .row .col-3, .row .col-4, .row .col-5,
-.row .col-6, .row .col-7, .row .col-8, .row .col-9, .row .col-10,
-.row .col-11, .row .col-12, .row .col, .row .col-auto {
-  position: relative;
-  width: 100%;
-  min-height: 1px;
-  margin: 0;
-  padding: 0;
-  padding-right: 15px;
-  padding-left: 15px;
-}
+
 
 .col-1 {
   flex: 0 0 8.3333333333%;

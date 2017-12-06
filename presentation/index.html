@@ -30,41 +30,41 @@
 
 
         <section>
-          <h2>A Basic Flex Item</h2>
-          <p>Here we make a basic column. Each flex item with the <code>col</code> class will be the same width as each other.</p>
+          <h2>An Auto Flex Item</h2>
+          <p>Here we make a column whose width is automatically sizes to the width of the content inside it.</p>
           <div class="row">
             <div class="col">
-              <pre><code class="hljs" style="word-wrap: break-word;">.col {
-  flex-basis: 0;
-  flex-grow: 1;
-  max-width: 100%;
+              <pre><code class="hljs" style="word-wrap: break-word;">.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: none;
 }</code></pre>
             </div>
             <div class="col">
               <pre><code class="hljs" style="word-wrap: break-word;"><div class="row">
-  <div class="col">...</div>
+  <div class="col-auto">...</div>
   <div class="col">...</div>
   <div class="col">...</div>
 </div></code></pre>
             </div>
           </div>
 
-          <p><small>
-            We can add or remove flex items with the <code>col</code> class and the grid will adjust,
-            giving each flex item column an equal length as a proportion of the flex container row.
-          </small></p>
+
           <div class="row row-filler" style="height: 1.5em;">
-            <div class="col"><div class="col-filler full-width h-1 dark-gray">1</div></div>
-            <div class="col"><div class="col-filler full-width h-1 dark-gray">2</div></div>
-            <div class="col"><div class="col-filler full-width h-1 dark-gray">3</div></div>
+            <div class="col-auto"><div class="col-filler full-width h-1 dark-gray">col-auto</div></div>
+            <div class="col"><div class="col-filler h-1 dark-gray">col</div></div>
+            <div class="col"><div class="col-filler h-1 dark-gray">col</div></div>
+          </div>
+          <div class="row row-filler" style="height: 1.5em;">
+            <div class="col-auto"><div class="col-filler full-width h-1 dark-gray">col-auto and more</div></div>
+            <div class="col"><div class="col-filler h-1 dark-gray">col</div></div>
+            <div class="col"><div class="col-filler h-1 dark-gray">col</div></div>
           </div>
 
-          <div class="row row-filler">
-            <div class="col"><div class="col-filler full-width h-1 dark-gray">1</div></div>
-            <div class="col"><div class="col-filler full-width h-1 dark-gray">2</div></div>
-            <div class="col"><div class="col-filler full-width h-1 dark-gray">3</div></div>
-            <div class="col"><div class="col-filler full-width h-1 dark-gray">4</div></div>
-          </div>
+          <p><small>
+            Notice how the column with the <code>col-auto</code> class stretches to the exact width of the content,
+            and the columns with the <code>col</code> class adjust to fill the rest of the space.
+          </small></p>
 
         </section>
 
