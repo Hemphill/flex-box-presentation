@@ -6,20 +6,20 @@
 
 		<title>Flexbox Layout</title>
 
-		<link rel="stylesheet" href="stuff/reveal.js/css/reveal.css">
-		<link rel="stylesheet" href="stuff/reveal.js/css/theme/black.css">
+		<link rel="stylesheet" href="assets/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="assets/reveal.js/css/theme/black.css">
 
-    <link rel="stylesheet" href="presentation/assets/css/presentation.css">
+    <link rel="stylesheet" href="assets/css/presentation.css">
 
 		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="stuff/reveal.js/lib/css/zenburn.css">
+		<link rel="stylesheet" href="assets/reveal.js/lib/css/zenburn.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
 			link.rel = 'stylesheet';
 			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? '../stuff/reveal.js/css/print/pdf.css' : '../stuff/reveal.js/css/print/paper.css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../assets/reveal.js/css/print/pdf.css' : '../assets/reveal.js/css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 	</head>
@@ -31,8 +31,10 @@
           <h1>Flexbox Layout</h1>
           <h3>CSS Flexible Box Layout</h3>
           <p>
-            <small>Created by <a href="https://twitter.com/Hemphill">Greg Hemphill</a> at <a href="https://webstop.com">Webstop</a></small>
+            <small>Created by <a href="https://twitter.com/Hemphill">Greg Hemphill</a> at <a href="https://webstop.com">Webstop</a>. <br>
+              Get the <a href="https://github.com/Hemphill/flex-box-presentation" target="_blank">source code</a> for this presentation <a href="https://github.com/Hemphill/flex-box-presentation" target="_blank">here</a>.</small>
           </p>
+
         </section>
 
         <section>
@@ -644,6 +646,8 @@
 
         <section>
           <h2>Resources</h2>
+          <p><small>Created by <a href="https://twitter.com/Hemphill">Greg Hemphill</a> and sponsored by <a href="https://webstop.com">Webstop</a>. <br>
+              Get the <a href="https://github.com/Hemphill/flex-box-presentation" target="_blank">source code</a> for this presentation <a href="https://github.com/Hemphill/flex-box-presentation" target="_blank">here</a>.</small></p>
           <small>
             <ul>
               <li><a target="_blank" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS-Tricks Guide to Flexbox</a> A clear overview and guide to Flexbox.</li>
@@ -664,11 +668,20 @@
           <p><strong>TIP: </strong> look for <strong><code style="color: lightgreen;">display: flex;</code></strong> in articles about Flexbox. If you see <code style="color: red;">display: box;</code> or <code style="color: red;">display: flexbox;</code> the article is about the older versions of the spec which is very different than the final version.</p>
         </section>
 
+        <section>
+          <h1>Fin.</h1>
+          <p>
+            <small>Created by <a href="https://twitter.com/Hemphill">Greg Hemphill</a> and sponsored by <a href="https://webstop.com">Webstop</a>.
+            <br><br>
+            Get the <a href="https://github.com/Hemphill/flex-box-presentation" target="_blank">source code</a> for this presentation <a href="https://github.com/Hemphill/flex-box-presentation" target="_blank">here</a>.</small>
+            </p>
+        </section>
+
 			</div>
 		</div>
 
-		<script src="stuff/reveal.js/lib/js/head.min.js"></script>
-		<script src="stuff/reveal.js/js/reveal.js"></script>
+		<script src="assets/reveal.js/lib/js/head.min.js"></script>
+		<script src="assets/reveal.js/js/reveal.js"></script>
 
 		<script>
 			// More info about config & dependencies:
@@ -676,10 +689,10 @@
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
 				dependencies: [
-					{ src: 'stuff/reveal.js/plugin/markdown/marked.js' },
-					{ src: 'stuff/reveal.js/plugin/markdown/markdown.js' },
-					{ src: 'stuff/reveal.js/plugin/notes/notes.js', async: true },
-					{ src: 'stuff/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'assets/reveal.js/plugin/markdown/marked.js' },
+					{ src: 'assets/reveal.js/plugin/markdown/markdown.js' },
+					{ src: 'assets/reveal.js/plugin/notes/notes.js', async: true },
+					{ src: 'assets/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
 		</script>
