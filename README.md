@@ -1,12 +1,13 @@
-# Flex-Box presentation
+# Flex-Box Presentation
 
 ## Setup
 
-The main prerequisite to run this app is to have Docker installed. You can get it here 
-[Docker for Mac](https://www.docker.com/docker-mac) or here [Docker for Windows](https://www.docker.com/docker-mac).
+I've included all the dependancies, so their is no setup required other than downloading this project.
 
-With Docker installed run the following command:
+## Viewing the Presentation
 
-```sh
-./yarn install
-```
+Simply open the `presentation/index.html` file in your favorite web browser (tested in Safari & Chrome). 
+
+To navigate the slides use the arrow keys on your keyboard or click on the arrows in the lower right corner of each slide. 
+
+
