@@ -26,51 +26,6 @@
 		<div class="reveal">
 			<div class="slides">
 
-
-
-
-        <section>
-          <h2>An Auto Flex Item</h2>
-          <p>Here we make a column whose width is automatically sizes to the width of the content inside it.</p>
-          <div class="row">
-            <div class="col">
-              <pre><code class="hljs" style="word-wrap: break-word;">.col-auto {
-  flex: 0 0 auto;
-  width: auto;
-  max-width: none;
-}</code></pre>
-            </div>
-            <div class="col">
-              <pre><code class="hljs" style="word-wrap: break-word;"><div class="row">
-  <div class="col-auto">...</div>
-  <div class="col">...</div>
-  <div class="col">...</div>
-</div></code></pre>
-            </div>
-          </div>
-
-
-          <div class="row row-filler" style="height: 1.5em;">
-            <div class="col-auto"><div class="col-filler full-width h-1 dark-gray">col-auto</div></div>
-            <div class="col"><div class="col-filler h-1 dark-gray">col</div></div>
-            <div class="col"><div class="col-filler h-1 dark-gray">col</div></div>
-          </div>
-          <div class="row row-filler" style="height: 1.5em;">
-            <div class="col-auto"><div class="col-filler full-width h-1 dark-gray">col-auto and more</div></div>
-            <div class="col"><div class="col-filler h-1 dark-gray">col</div></div>
-            <div class="col"><div class="col-filler h-1 dark-gray">col</div></div>
-          </div>
-
-          <p><small>
-            Notice how the column with the <code>col-auto</code> class stretches to the exact width of the content,
-            and the columns with the <code>col</code> class adjust to fill the rest of the space.
-          </small></p>
-
-        </section>
-
-
-
-
 				<section>
           <h1>Flexbox Layout</h1>
           <h3>CSS Flexible Box Layout</h3>
@@ -550,20 +505,153 @@
             <div class="col"><div class="col-filler full-width h-1 dark-gray">3</div></div>
             <div class="col"><div class="col-filler full-width h-1 dark-gray">4</div></div>
           </div>
+        </section>
 
+        <section>
+          <h2>An Auto Flex Item</h2>
+          <p>Here we make a column whose width is automatically sizes to the width of the content inside it.</p>
+          <div class="row">
+            <div class="col">
+              <pre><code class="hljs" style="word-wrap: break-word;">.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: none;
+}</code></pre>
+            </div>
+            <div class="col">
+              <pre><code class="hljs" style="word-wrap: break-word;"><div class="row">
+  <div class="col-auto">...</div>
+  <div class="col">...</div>
+  <div class="col">...</div>
+</div></code></pre>
+            </div>
+          </div>
+
+
+          <div class="row row-filler" style="height: 1.5em;">
+            <div class="col-auto"><div class="col-filler full-width h-1 dark-gray">col-auto</div></div>
+            <div class="col"><div class="col-filler h-1 dark-gray">col</div></div>
+            <div class="col"><div class="col-filler h-1 dark-gray">col</div></div>
+          </div>
+          <div class="row row-filler" style="height: 1.5em;">
+            <div class="col-auto"><div class="col-filler full-width h-1 dark-gray">col-auto and more</div></div>
+            <div class="col"><div class="col-filler h-1 dark-gray">col</div></div>
+            <div class="col"><div class="col-filler h-1 dark-gray">col</div></div>
+          </div>
+
+          <p><small>
+            Notice how the column with the <code>col-auto</code> class stretches to the exact width of the content,
+            and the columns with the <code>col</code> class adjust to fill the rest of the space.
+          </small></p>
+
+        </section>
+
+        <section>
+          <h2>12 Column Grid</h2>
+          <p>The following CSS classes allow us to have a traditional 12 column grid.</p>
+          <pre><code class="hljs" style="word-wrap: break-word; font-size: 0.8em; line-height: 1em;">.col-1  { flex: 0 0  8.3333333333%; max-width:  8.3333333333%;}
+.col-2  { flex: 0 0 16.6666666667%; max-width: 16.6666666667%;}
+.col-3  { flex: 0 0 25%;            max-width: 25%;}
+.col-4  { flex: 0 0 33.3333333333%; max-width: 33.3333333333%;}
+.col-5  { flex: 0 0 41.6666666667%; max-width: 41.6666666667%;}
+.col-6  { flex: 0 0 50%;            max-width: 50%;}
+.col-7  { flex: 0 0 58.3333333333%; max-width: 58.3333333333%;}
+.col-8  { flex: 0 0 66.6666666667%; max-width: 66.6666666667%;}
+.col-9  { flex: 0 0 75%;            max-width: 75%;}
+.col-10 { flex: 0 0 83.3333333333%; max-width: 83.3333333333%;}
+.col-11 { flex: 0 0 91.6666666667%; max-width: 91.6666666667%;}
+.col-12 { flex: 0 0 100%;           max-width: 100%;}</code></pre>
+
+          <div class="row row-filler" style="height: 1.5em;">
+            <div class="col-2"><div class="col-filler h-1 dark-gray">col-2</div></div>
+            <div class="col"><div class="col-filler h-1 dark-gray">col</div></div>
+            <div class="col"><div class="col-filler h-1 dark-gray">col</div></div>
+            <div class="col-auto"><div class="col-filler h-1 dark-gray">auto</div></div>
+          </div>
+          <div class="row row-filler">
+            <div class="col-3"><div class="col-filler h-1 dark-gray">col-3</div></div>
+            <div class="col"><div class="col-filler h-1 dark-gray">col</div></div>
+            <div class="col"><div class="col-filler h-1 dark-gray">col</div></div>
+            <div class="col"><div class="col-filler h-1 dark-gray">col</div></div>
+          </div>
+
+          <p><small>
+            We can combine these grid classes with <code>col-auto</code> and <code>col</code> classes. The <code>col</code> cells will adjust to fill the remaining space.
+          </small></p>
+
+        </section>
+
+        <section>
+          <h2>Finishing Touches</h2>
+          <div class="row">
+            <div class="col">
+              <pre><code class="hljs" style="word-wrap: break-word; font-size: 0.8em; line-height: 1em;">.col-1, .col-2, .col-3, .col-4,
+.col-5, .col-6, .col-7, .col-8,
+.col-9, .col-10, .col-11, .col-12,
+.col, .col-auto {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  margin: 0;
+  padding: 0 15px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+  padding: 0;
+}</code></pre>
+            </div>
+            <div class="col">
+              <pre><code class="hljs" style="word-wrap: break-word; font-size: 0.8em; line-height: 1em;">.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: none;
+}
+.order-1  { order:  1; }
+.order-2  { order:  2; }
+.order-3  { order:  3; }
+.order-4  { order:  4; }
+...
+.order-12 { order: 12; }</code></pre>
+            </div>
+          </div>
+
+          <pre><code class="hljs" style="word-wrap: break-word; font-size: 0.8em; line-height: 1em;">.col-1  { flex: 0 0  8.3333333333%; max-width:  8.3333333333%;}
+.col-2  { flex: 0 0 16.6666666667%; max-width: 16.6666666667%;}
+.col-3  { flex: 0 0 25%;            max-width: 25%;}
+.col-4  { flex: 0 0 33.3333333333%; max-width: 33.3333333333%;}
+.col-5  { flex: 0 0 41.6666666667%; max-width: 41.6666666667%;}
+.col-6  { flex: 0 0 50%;            max-width: 50%;}
+.col-7  { flex: 0 0 58.3333333333%; max-width: 58.3333333333%;}
+.col-8  { flex: 0 0 66.6666666667%; max-width: 66.6666666667%;}
+.col-9  { flex: 0 0 75%;            max-width: 75%;}
+.col-10 { flex: 0 0 83.3333333333%; max-width: 83.3333333333%;}
+.col-11 { flex: 0 0 91.6666666667%; max-width: 91.6666666667%;}
+.col-12 { flex: 0 0 100%;           max-width: 100%;}</code></pre>
+        </section>
+
+        <section>
+          <h2>Bootstrap 4</h2>
+          <p>Guess what we just created?<br> A light version of the <a href="http://getbootstrap.com/docs/4.0/layout/grid/" target="bootstrap-docs">grid system in Bootstrap 4</a>.<hr> We are missing the responsive features, but otherwise it's pretty much the <a href="https://github.com/twbs/bootstrap/blob/v4-dev/dist/css/bootstrap-grid.css" target="bootstrap-code">same grid</a>.</p>
         </section>
 
         <section>
           <h2>Resources</h2>
           <small>
             <ul>
-              <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS-Tricks Guide to Flexbox</a> A clear overview and guide to Flexbox.</li>
-              <li><a href="https://philipwalton.github.io/solved-by-flexbox/">Solved by Flexbox</a> Showcases hard to solve CSS problems, that become easy with Flexbox.</li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">Mozilla Flexible Boxes</a> A comprehensive guide to Flexbox.</li>
-              <li><a href="https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties">Visual Guide</a> A Visual Guide to CSS3 Flexbox Properties.</li>
-              <li><a href="https://www.w3.org/TR/css-flexbox-1/">CSS Flexible Box Layout Module Level 1</a> W3C specification describes a CSS box model optimized for user interface design.</li>
-              <li><a href="https://flexbox.io">What The Flexbox?</a> A free video course for learning Flexbox.</li>
-              <li><a href="http://flexboxfroggy.com">Flexbox Froggy</a> A game that helps you learn Flexbox.</li>
+              <li><a target="_blank" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS-Tricks Guide to Flexbox</a> A clear overview and guide to Flexbox.</li>
+              <li><a target="_blank" href="https://philipwalton.github.io/solved-by-flexbox/">Solved by Flexbox</a> Showcases hard to solve CSS problems, that become easy with Flexbox.</li>
+              <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">Mozilla Flexible Boxes</a> A comprehensive guide to Flexbox.</li>
+              <li><a target="_blank" href="https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties">Visual Guide</a> A Visual Guide to CSS3 Flexbox Properties.</li>
+              <li><a target="_blank" href="https://www.w3.org/TR/css-flexbox-1/">CSS Flexible Box Layout Module Level 1</a> W3C specification describes a CSS box model optimized for user interface design.</li>
+              <li><a target="_blank" href="https://flexbox.io">What The Flexbox?</a> A free video course for learning Flexbox.</li>
+              <li><a target="_blank" href="http://flexboxfroggy.com">Flexbox Froggy</a> A game that helps you learn Flexbox.</li>
             </ul>
           </small>
         </section>
