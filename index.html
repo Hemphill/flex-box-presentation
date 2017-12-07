@@ -1,0 +1,687 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Flexbox Layout</title>
+
+		<link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="node_modules/reveal.js/css/theme/black.css">
+
+    <link rel="stylesheet" href="presentation/assets/css/presentation.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="node_modules/reveal.js/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../node_modules/reveal.js/css/print/pdf.css' : '../node_modules/reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+          <h1>Flexbox Layout</h1>
+          <h3>CSS Flexible Box Layout</h3>
+          <p>
+            <small>Created by <a href="https://twitter.com/Hemphill">Greg Hemphill</a> at <a href="https://webstop.com">Webstop</a></small>
+          </p>
+        </section>
+
+        <section>
+          <h2>What is Flexbox?</h2>
+          <p>Flexbox, a W3C level 1 module, is the first widely adopted proper CSS layout mechanism.</p>
+          <hr>
+          <p>In the past we had to rely on floats or tables, which were not designed for the task. This left us with buggy, verbose &amp; hacky solutions. </p>
+        </section>
+
+				<section>
+          <h2>Basics &amp; Terminology</h2>
+          <img src="assets/images/Flexbox_chart.svg">
+        </section>
+
+        <section>
+          <h1>Flex Container</h1>
+          <div class="row">
+            <div class="col">
+              <img src="assets/images/Flexbox_chart_container.svg">
+            </div>
+            <div class="col">
+              <p>The parent element containing Flex Items. It is defined by the CSS display property. </p>
+              <pre><code class="hljs" style="word-wrap: break-word;">display: flex;</code>or <code class="hljs" style="word-wrap: break-word;">display: inline-flex;</code></pre>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Flex Container Properties</h2>
+          <ul>
+            <li>flex-direction</li>
+            <li>flex-wrap</li>
+            <li>flex-flow</li>
+            <li>justify-content</li>
+            <li>align-items</li>
+            <li>align-content</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>flex-direction</h2>
+          <img src="assets/images/flex-direction.svg">
+          <p>Determines the direction of the <strong>main-axis</strong>. It alters the position and direction of the flex items.</p>
+          <p>Values: <code>row</code> (default), <code>row-reverse</code>, <code>column</code>, or <code>column-reverse</code>.</p>
+          <pre><code class="hljs" style="word-wrap: break-word;">.container { flex-direction: row; }</code></pre>
+        </section>
+
+        <section>
+          <h2>flex-wrap</h2>
+          <p>By default, flex items will stay on the same line. With the ability to shrink or expand as the layout changes.</p>
+          <p>The <code>flex-wrap</code> property can change this behavior in a similar fashion to how the <code>word-wrap</code>
+          property affects text.</p>
+          <p>Values: <code>nowrap</code> (default), <code>wrap</code>, or <code>wrap-reverse</code>.</p>
+          <pre><code class="hljs" style="word-wrap: break-word;">.container { flex-wrap: nowrap; }</code></pre>
+        </section>
+
+        <section>
+          <h2>flex-flow</h2>
+          <p>A shorthand property for <code>flex-direction</code> and <code>flex-wrap</code>.</p>
+          <p>Defaults: <code>row</code>, <code>nowrap</code>.</p>
+          <pre><code class="hljs" style="word-wrap: break-word;">.container { flex-wrap: nowrap; }</code></pre>
+        </section>
+
+        <section>
+          <h2>justify-content</h2>
+          <p>Determines alignment of flex items on the <strong>main-axis</strong>.</p>
+
+          <div class="row">
+            <div class="col-3" style="text-align: left;">
+              Value
+            </div>
+            <div class="col" style="text-align: left;">
+              Effect
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-3" style="text-align: left;">
+              <small><code>flex-start</code> <span style="font-size: 0.7em;">(default)</span></small>
+            </div>
+            <div class="col">
+              <div class="row row-filler justify-flex-start">
+                <div class="col-2"><div class="col-filler full-width h-1 "></div></div>
+                <div class="col-1"><div class="col-filler full-width h-1 "></div></div>
+                <div class="col-4"><div class="col-filler full-width h-1 "></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-3" style="text-align: left;">
+              <small><code>flex-end</code></small>
+            </div>
+            <div class="col">
+              <div class="row row-filler justify-flex-end">
+                <div class="col-2"><div class="col-filler full-width h-1 "></div></div>
+                <div class="col-1"><div class="col-filler full-width h-1 "></div></div>
+                <div class="col-4"><div class="col-filler full-width h-1 "></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-3" style="text-align: left;">
+              <small><code>center</code></small>
+            </div>
+            <div class="col">
+              <div class="row row-filler justify-center">
+                <div class="col-2"><div class="col-filler full-width h-1 "></div></div>
+                <div class="col-1"><div class="col-filler full-width h-1 "></div></div>
+                <div class="col-4"><div class="col-filler full-width h-1 "></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-3" style="text-align: left;">
+              <small><code>space-between</code></small>
+            </div>
+            <div class="col">
+              <div class="row row-filler justify-space-between">
+                <div class="col-2"><div class="col-filler full-width h-1 "></div></div>
+                <div class="col-1"><div class="col-filler full-width h-1 "></div></div>
+                <div class="col-4"><div class="col-filler full-width h-1 "></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-3" style="text-align: left;">
+              <small><code>space-around</code></small>
+            </div>
+            <div class="col">
+              <div class="row row-filler justify-space-around">
+                <div class="col-2"><div class="col-filler full-width h-1 "></div></div>
+                <div class="col-1"><div class="col-filler full-width h-1 "></div></div>
+                <div class="col-4"><div class="col-filler full-width h-1 "></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-3" style="text-align: left;">
+              <small><code>space-evenly</code></small>
+            </div>
+            <div class="col">
+              <div class="row row-filler justify-space-evenly">
+                <div class="col-2"><div class="col-filler full-width h-1 "></div></div>
+                <div class="col-1"><div class="col-filler full-width h-1 "></div></div>
+                <div class="col-4"><div class="col-filler full-width h-1 "></div></div>
+              </div>
+            </div>
+          </div>
+
+          <pre><code class="hljs" style="word-wrap: break-word;">.container { justify-content: flex-start; }</code></pre>
+        </section>
+
+        <section>
+          <h2>align-items</h2>
+          <p>Determines alignment of flex items on the cross-axis for the current line.</p>
+          <div class="row">
+            <div class="col">
+              <small><code>flex-start</code></small>
+              <div class="row row-filler justify-center align-flex-start">
+                <div class="col"><div class="col-filler full-width h-2"></div></div>
+                <div class="col"><div class="col-filler full-width h-1 "></div></div>
+                <div class="col"><div class="col-filler full-width h-3"></div></div>
+              </div>
+            </div>
+            <div class="col">
+              <small><code>flex-end</code></small>
+              <div class="row row-filler align-flex-end">
+                <div class="col"><div class="col-filler full-width h-2"></div></div>
+                <div class="col"><div class="col-filler full-width h-1 "></div></div>
+                <div class="col"><div class="col-filler full-width h-3"></div></div>
+              </div>
+            </div>
+            <div class="col">
+              <small><code>center</code></small>
+              <div class="row row-filler align-center">
+                <div class="col"><div class="col-filler full-width h-2"></div></div>
+                <div class="col"><div class="col-filler full-width h-1 "></div></div>
+                <div class="col"><div class="col-filler full-width h-3"></div></div>
+              </div>
+            </div>
+            <div class="col">
+              <small><code>stretch</code> <span style="font-size: 0.7em;">(default)</span></small>
+              <div class="row row-filler align-stretch">
+                <div class="col"><div class="col-filler full-width full-height"></div></div>
+                <div class="col"><div class="col-filler full-width full-height"></div></div>
+                <div class="col"><div class="col-filler full-width h-3"></div></div>
+              </div>
+            </div>
+            <div class="col">
+              <small><code>baseline</code></small>
+              <div class="row row-filler align-baseline h-3">
+                <div class="col"><div class="col-filler full-width" style="font-size: 0.8em; color: #333;">A</div></div>
+                <div class="col"><div class="col-filler full-width" style="font-size: 0.5em; color: #333;">A</div></div>
+                <div class="col"><div class="col-filler full-width" style="font-size: 1.0em; color: #333;">A</div></div>
+              </div>
+            </div>
+          </div>
+          <pre><code class="hljs" style="word-wrap: break-word;">.container { align-items: stretch; }</code></pre>
+        </section>
+
+        <section>
+          <h2>align-content</h2>
+          <p><small>Determines spacing of flex items on the cross-axis when extra space is available. Only applies when flex items have wrapped to multiple lines.</small></p>
+          <div class="row">
+
+            <div class="col">
+              <small><code>flex-start</code></small>
+              <div class="row row-filler h-4" style="align-content: flex-start; flex-wrap: wrap;">
+                <div class="col-2"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-1"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-3"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-3"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-2"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-3"><div class="col-filler h-1 m-t"></div></div>
+              </div>
+            </div>
+
+            <div class="col">
+              <small><code>flex-end</code></small>
+              <div class="row row-filler h-4" style="align-content: flex-end; flex-wrap: wrap;">
+                <div class="col-2"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-1"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-3"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-3"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-2"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-3"><div class="col-filler h-1 m-t"></div></div>
+              </div>
+            </div>
+
+            <div class="col">
+              <small><code>center</code></small>
+              <div class="row row-filler h-4" style="align-content: center; flex-wrap: wrap;">
+                <div class="col-2"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-1"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-3"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-3"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-2"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-3"><div class="col-filler h-1 m-t"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+
+
+            <div class="col">
+              <small><code>stretch</code> <span style="font-size: 0.7em;">(default)</span></small>
+              <div class="row row-filler h-4" style="align-content: stretch; flex-wrap: wrap;">
+                <div class="col-2"><div class="col-filler full-height"></div></div>
+                <div class="col-1"><div class="col-filler full-height"></div></div>
+                <div class="col-3"><div class="col-filler full-height"></div></div>
+                <div class="col-3"><div class="col-filler full-height"></div></div>
+                <div class="col-2"><div class="col-filler full-height"></div></div>
+                <div class="col-3"><div class="col-filler full-height"></div></div>
+              </div>
+            </div>
+
+            <div class="col">
+              <small><code>space-around</code></small>
+              <div class="row row-filler h-4" style="align-content: space-around; flex-wrap: wrap;">
+                <div class="col-2"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-1"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-3"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-3"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-2"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-3"><div class="col-filler h-1 m-t"></div></div>
+              </div>
+            </div>
+
+            <div class="col">
+              <small><code>space-between</code></small>
+              <div class="row row-filler h-4" style="align-content: space-between; flex-wrap: wrap;">
+                <div class="col-2"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-1"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-3"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-3"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-1"><div class="col-filler h-1 m-t"></div></div>
+                <div class="col-3"><div class="col-filler h-1 m-t"></div></div>
+              </div>
+            </div
+
+          </div>
+
+          <pre><code class="hljs" style="word-wrap: break-word;">.container { align-content: stretch; }</code></pre>
+        </section>
+
+        <section>
+          <h1>Flex Item</h1>
+          <div class="row">
+            <div class="col">
+              <img src="assets/images/Flexbox_chart_items.svg">
+            </div>
+            <div class="col">
+              <p>The child element containing your content. It resides inside a flex container.</p>
+
+
+            </div>
+          </div>
+          <pre><code class="hljs" style="word-wrap: break-word;"><div class="flex-container">
+  <div class="flex-item"></div>
+  <div class="flex-item"></div>
+  <div class="flex-item"></div>
+</div></code></pre>
+        </section>
+
+        <section>
+          <h2>Flex Item Properties</h2>
+
+          <ul>
+            <li>order</li>
+            <li>flex-grow</li>
+            <li>flex-basis</li>
+            <li>flex-shrink</li>
+            <li>flex</li>
+            <li>align-self</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Order</h2>
+          <p>Allows you to alter the order flex items are displayed in. By default items are displayed in source order. </p>
+          <div class="row">
+            <div class="col-7">
+              <pre><code class="hljs" style="word-wrap: break-word;"><div class="flex-container">
+  <div style="order: 3">3</div>
+  <div style="order: 1">1</div>
+  <div style="order: 2">2</div>
+  <div style="order: 1">1</div>
+</div></code></pre>
+            </div>
+            <div class="col">
+              <div class="row row-filler">
+                <div class="col order-3"><div class="col-filler dark-gray">3</div></div>
+                <div class="col order-1"><div class="col-filler dark-gray">1</div></div>
+                <div class="col order-2"><div class="col-filler dark-gray">2</div></div>
+                <div class="col order-1"><div class="col-filler dark-gray">1</div></div>
+              </div>
+              <p>Accepts any integer.</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>flex-grow</h2>
+          <p>Determines how big flex-items are in relation to each other.
+            If all flex-items have the same <code>flex-grow</code> value they well all be the same size. Defaults to 0. </p>
+              <div class="row row-filler">
+                <div class="grow-3"><div class="col-filler dark-gray">3</div></div>
+                <div class="grow-1"><div class="col-filler dark-gray">1</div></div>
+                <div class="grow-2"><div class="col-filler dark-gray">2</div></div>
+                <div class="grow-1"><div class="col-filler dark-gray">1</div></div>
+                <div class="grow-0"><div class="col-filler dark-gray">0</div></div>
+              </div>
+          <p>Here we can see 2 is twice as big as 1, and 3 is three times as big as 1.</p>
+          <pre><code class="hljs" style="word-wrap: break-word;">.flex-item { flex-grow: 1; }</code></pre>
+        </section>
+
+        <section>
+          <h2>flex-basis</h2>
+          <p>Determines the size of a flex-item prior to the space being determined.</p>
+          <p>Accepts standard CSS lenght values (e.g. px, %, em, rem, &amp; etc.), or a keyword (currently only <code>auto</code>).</p>
+          <div style="display: flex;">
+            <div style="flex: 1 1 40%; border-right: 5px black solid;"><div class="col-filler dark-gray">40%</div></div>
+            <div style="flex: 1 1 40%; border-right: 5px black solid;"><div class="col-filler dark-gray">40%</div></div>
+            <div style="flex: 1 1 auto;"><div class="col-filler dark-gray">auto</div></div>
+          </div>
+          <pre><code class="hljs" style="word-wrap: break-word;">.flex-item { flex-basis: 10rem; }</code></pre>
+          <p>The <code>auto</code> keyword uses the <code>width</code> or <code>height</code> property, or defaults to allowing the <code>flex-grow</code> to determine the length.</p>
+        </section>
+
+
+        <section>
+          <h2>flex-shrink</h2>
+          <p>The relative factor to shrink by when the flex-items are longer than the space allows. </p>
+          <p>Key: <code>flex-shrink</code> | <code>flex-basis</code></p>
+          <div style="display: flex; max-width: 1800px;">
+            <div style="flex: 1 1 1000px; border-right: 5px black solid;"><div class="col-filler dark-gray">1 | 1000px</div></div>
+            <div style="flex: 1 2 1000px;"><div class="col-filler dark-gray">2 | 1000px</div></div>
+          </div>
+          <div style="display: flex; min-width: 250px; border-top: 5px solid black;">
+            <div style="flex: 1 1 100px; border-right: 5px black solid;"><div class="col-filler dark-gray">1 | 100px</div></div>
+            <div style="flex: 1 2 100px;"><div class="col-filler dark-gray">2 | 100px</div></div>
+          </div>
+          <p>Accepts whole numbers. Default value is <code>1</code>.</p>
+          <pre><code class="hljs" style="word-wrap: break-word;">.flex-item { flex-shrink: 1; }</code></pre>
+        </section>
+
+        <section>
+          <h2>flex</h2>
+          <p>
+            A short hand for <code>flex-grow</code>, <code>flex-shrink</code>, &amp; <code>flex-basis</code>.
+            It can be expressed five ways:
+          </p>
+          <small>
+            <ol>
+              <li><code>flex-grow</code>, <code>flex-shrink</code>,  &amp; <code>flex-basis</code></li>
+              <li><code>flex-grow</code> &amp; <code>flex-shrink</code></li>
+              <li><code>flex-grow</code> &amp; <code>flex-basis</code></li>
+              <li><code>flex-grow</code></li>
+              <li><code>flex-basis</code></li>
+            </ol>
+          </small>
+
+          <pre><code class="hljs" style="word-wrap: break-word;">.flex-item { flex: 0 1 auto; }</code></pre>
+          <p><strong>Tip:</strong> Setting the <code>flex</code> property is preferred over individual properties, because it sets sensible defaults for your flex item.</p>
+        </section>
+
+        <section>
+          <h1>Example</h1>
+          <p>We are going to build a simple grid. With a Flex Container and Flex Items inside it.</p>
+        </section>
+
+        <section>
+          <h2>A Flex Container</h2>
+          <p>We are going to call our flex container <code>.row</code> using the default left to right direction. </p>
+          <div class="row">
+            <div class="col">
+              <pre><code class="hljs" style="word-wrap: break-word;">.row {
+  display: flex;
+  flex-wrap: wrap;
+}</code></pre>
+            </div>
+            <div class="col">
+              <pre><code class="hljs" style="word-wrap: break-word;"><div class="row">
+  ... flex items go here ...
+</div></code></pre>
+            </div>
+          </div>
+
+          <p><small>Simple stuff, doesn't do much of anything on it's own, we need flex items inside it to act as columns in our row.</small></p>
+
+        </section>
+
+        <section>
+          <h2>A Basic Flex Item</h2>
+          <p>Here we make a basic column. Each flex item with the <code>col</code> class will be the same width as each other.</p>
+          <div class="row">
+            <div class="col">
+              <pre><code class="hljs" style="word-wrap: break-word;">.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}</code></pre>
+            </div>
+            <div class="col">
+              <pre><code class="hljs" style="word-wrap: break-word;"><div class="row">
+  <div class="col">...</div>
+  <div class="col">...</div>
+  <div class="col">...</div>
+</div></code></pre>
+            </div>
+          </div>
+
+          <p><small>
+            We can add or remove flex items with the <code>col</code> class and the grid will adjust,
+            giving each flex item column an equal length as a proportion of the flex container row.
+          </small></p>
+          <div class="row row-filler" style="height: 1.5em;">
+            <div class="col"><div class="col-filler full-width h-1 dark-gray">1</div></div>
+            <div class="col"><div class="col-filler full-width h-1 dark-gray">2</div></div>
+            <div class="col"><div class="col-filler full-width h-1 dark-gray">3</div></div>
+          </div>
+
+          <div class="row row-filler">
+            <div class="col"><div class="col-filler full-width h-1 dark-gray">1</div></div>
+            <div class="col"><div class="col-filler full-width h-1 dark-gray">2</div></div>
+            <div class="col"><div class="col-filler full-width h-1 dark-gray">3</div></div>
+            <div class="col"><div class="col-filler full-width h-1 dark-gray">4</div></div>
+          </div>
+        </section>
+
+        <section>
+          <h2>An Auto Flex Item</h2>
+          <p>Here we make a column whose width is automatically sizes to the width of the content inside it.</p>
+          <div class="row">
+            <div class="col">
+              <pre><code class="hljs" style="word-wrap: break-word;">.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: none;
+}</code></pre>
+            </div>
+            <div class="col">
+              <pre><code class="hljs" style="word-wrap: break-word;"><div class="row">
+  <div class="col-auto">...</div>
+  <div class="col">...</div>
+  <div class="col">...</div>
+</div></code></pre>
+            </div>
+          </div>
+
+
+          <div class="row row-filler" style="height: 1.5em;">
+            <div class="col-auto"><div class="col-filler full-width h-1 dark-gray">col-auto</div></div>
+            <div class="col"><div class="col-filler h-1 dark-gray">col</div></div>
+            <div class="col"><div class="col-filler h-1 dark-gray">col</div></div>
+          </div>
+          <div class="row row-filler" style="height: 1.5em;">
+            <div class="col-auto"><div class="col-filler full-width h-1 dark-gray">col-auto and more</div></div>
+            <div class="col"><div class="col-filler h-1 dark-gray">col</div></div>
+            <div class="col"><div class="col-filler h-1 dark-gray">col</div></div>
+          </div>
+
+          <p><small>
+            Notice how the column with the <code>col-auto</code> class stretches to the exact width of the content,
+            and the columns with the <code>col</code> class adjust to fill the rest of the space.
+          </small></p>
+
+        </section>
+
+        <section>
+          <h2>12 Column Grid</h2>
+          <p>The following CSS classes allow us to have a traditional 12 column grid.</p>
+          <pre><code class="hljs" style="word-wrap: break-word; font-size: 0.8em; line-height: 1em;">.col-1  { flex: 0 0  8.3333333333%; max-width:  8.3333333333%;}
+.col-2  { flex: 0 0 16.6666666667%; max-width: 16.6666666667%;}
+.col-3  { flex: 0 0 25%;            max-width: 25%;}
+.col-4  { flex: 0 0 33.3333333333%; max-width: 33.3333333333%;}
+.col-5  { flex: 0 0 41.6666666667%; max-width: 41.6666666667%;}
+.col-6  { flex: 0 0 50%;            max-width: 50%;}
+.col-7  { flex: 0 0 58.3333333333%; max-width: 58.3333333333%;}
+.col-8  { flex: 0 0 66.6666666667%; max-width: 66.6666666667%;}
+.col-9  { flex: 0 0 75%;            max-width: 75%;}
+.col-10 { flex: 0 0 83.3333333333%; max-width: 83.3333333333%;}
+.col-11 { flex: 0 0 91.6666666667%; max-width: 91.6666666667%;}
+.col-12 { flex: 0 0 100%;           max-width: 100%;}</code></pre>
+
+          <div class="row row-filler" style="height: 1.5em;">
+            <div class="col-2"><div class="col-filler h-1 dark-gray">col-2</div></div>
+            <div class="col"><div class="col-filler h-1 dark-gray">col</div></div>
+            <div class="col"><div class="col-filler h-1 dark-gray">col</div></div>
+            <div class="col-auto"><div class="col-filler h-1 dark-gray">auto</div></div>
+          </div>
+          <div class="row row-filler">
+            <div class="col-3"><div class="col-filler h-1 dark-gray">col-3</div></div>
+            <div class="col"><div class="col-filler h-1 dark-gray">col</div></div>
+            <div class="col"><div class="col-filler h-1 dark-gray">col</div></div>
+            <div class="col"><div class="col-filler h-1 dark-gray">col</div></div>
+          </div>
+
+          <p><small>
+            We can combine these grid classes with <code>col-auto</code> and <code>col</code> classes. The <code>col</code> cells will adjust to fill the remaining space.
+          </small></p>
+
+        </section>
+
+        <section>
+          <h2>Finishing Touches</h2>
+          <div class="row">
+            <div class="col">
+              <pre><code class="hljs" style="word-wrap: break-word; font-size: 0.8em; line-height: 1em;">.col-1, .col-2, .col-3, .col-4,
+.col-5, .col-6, .col-7, .col-8,
+.col-9, .col-10, .col-11, .col-12,
+.col, .col-auto {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  margin: 0;
+  padding: 0 15px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+  padding: 0;
+}</code></pre>
+            </div>
+            <div class="col">
+              <pre><code class="hljs" style="word-wrap: break-word; font-size: 0.8em; line-height: 1em;">.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: none;
+}
+.order-1  { order:  1; }
+.order-2  { order:  2; }
+.order-3  { order:  3; }
+.order-4  { order:  4; }
+...
+.order-12 { order: 12; }</code></pre>
+            </div>
+          </div>
+
+          <pre><code class="hljs" style="word-wrap: break-word; font-size: 0.8em; line-height: 1em;">.col-1  { flex: 0 0  8.3333333333%; max-width:  8.3333333333%;}
+.col-2  { flex: 0 0 16.6666666667%; max-width: 16.6666666667%;}
+.col-3  { flex: 0 0 25%;            max-width: 25%;}
+.col-4  { flex: 0 0 33.3333333333%; max-width: 33.3333333333%;}
+.col-5  { flex: 0 0 41.6666666667%; max-width: 41.6666666667%;}
+.col-6  { flex: 0 0 50%;            max-width: 50%;}
+.col-7  { flex: 0 0 58.3333333333%; max-width: 58.3333333333%;}
+.col-8  { flex: 0 0 66.6666666667%; max-width: 66.6666666667%;}
+.col-9  { flex: 0 0 75%;            max-width: 75%;}
+.col-10 { flex: 0 0 83.3333333333%; max-width: 83.3333333333%;}
+.col-11 { flex: 0 0 91.6666666667%; max-width: 91.6666666667%;}
+.col-12 { flex: 0 0 100%;           max-width: 100%;}</code></pre>
+        </section>
+
+        <section>
+          <h2>Bootstrap 4</h2>
+          <p>Guess what we just created?<br> A light version of the <a href="http://getbootstrap.com/docs/4.0/layout/grid/" target="bootstrap-docs">grid system in Bootstrap 4</a>.<hr> We are missing the responsive features, but otherwise it's pretty much the <a href="https://github.com/twbs/bootstrap/blob/v4-dev/dist/css/bootstrap-grid.css" target="bootstrap-code">same grid</a>.</p>
+        </section>
+
+        <section>
+          <h2>Resources</h2>
+          <small>
+            <ul>
+              <li><a target="_blank" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS-Tricks Guide to Flexbox</a> A clear overview and guide to Flexbox.</li>
+              <li><a target="_blank" href="https://philipwalton.github.io/solved-by-flexbox/">Solved by Flexbox</a> Showcases hard to solve CSS problems, that become easy with Flexbox.</li>
+              <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">Mozilla Flexible Boxes</a> A comprehensive guide to Flexbox.</li>
+              <li><a target="_blank" href="https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties">Visual Guide</a> A Visual Guide to CSS3 Flexbox Properties.</li>
+              <li><a target="_blank" href="https://www.w3.org/TR/css-flexbox-1/">CSS Flexible Box Layout Module Level 1</a> W3C specification describes a CSS box model optimized for user interface design.</li>
+              <li><a target="_blank" href="https://flexbox.io">What The Flexbox?</a> A free video course for learning Flexbox.</li>
+              <li><a target="_blank" href="http://flexboxfroggy.com">Flexbox Froggy</a> A game that helps you learn Flexbox.</li>
+            </ul>
+          </small>
+        </section>
+
+        <section>
+          <h2>Learning Tip</h2>
+          <p>Flexbox started way back in 2007-2009, it's gone through 3 major iterations, and the final form came about in 2012.
+            Thus, you might run into outdated blog posts or other online resources.</p>
+          <p><strong>TIP: </strong> look for <strong><code style="color: lightgreen;">display: flex;</code></strong> in articles about Flexbox. If you see <code style="color: red;">display: box;</code> or <code style="color: red;">display: flexbox;</code> the article is about the older versions of the spec which is very different than the final version.</p>
+        </section>
+
+			</div>
+		</div>
+
+		<script src="../node_modules/reveal.js/lib/js/head.min.js"></script>
+		<script src="../node_modules/reveal.js/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: '../node_modules/reveal.js/plugin/markdown/marked.js' },
+					{ src: '../node_modules/reveal.js/plugin/markdown/markdown.js' },
+					{ src: '../node_modules/reveal.js/plugin/notes/notes.js', async: true },
+					{ src: '../node_modules/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
